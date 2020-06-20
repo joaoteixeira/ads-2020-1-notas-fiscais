@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contato extends Model
 {   
-    protected $primaryKey = 'id';
+    protected $table = 'usuarios';
 
-    protected $table = 'contatos';
+    public $fillable = ['nome'];
 
     public $timestamps = false;
 }

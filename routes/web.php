@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $contatos = \App\Contato::all();
+    $beneficiarios = \App\Beneficiario::all();
 
-    return $contatos;
+    return $beneficiarios;
 });
 
 Route::get('/sobre', function () {
