@@ -8,7 +8,7 @@ class Contato extends Model
 {   
     protected $table = 'usuarios';
 
-    public $fillable = ['nome'];
+    public $fillable = ['nome_usuario'];
 
     public $timestamps = false;
 }

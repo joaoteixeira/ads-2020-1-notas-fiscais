@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contato extends Model
 {   
-    protected $table = 'beneficiarios';
+    protected $table = 'lancamentos';
 
-    protected $fillable = []
+    protected $fillable = ['lote_lancamento','data_lancamento','n_chamado_lancamento'];
 }
