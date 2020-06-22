@@ -1,14 +1,17 @@
 @extends('layout.admin')
 
-@section ('content-title','Novo beneficiario')
+@section ('content-title','Novo beneficiário')
 
 @section('content')
-        <div class="form-group">
-            <label for="">Carteirinha></label>
-        </div>  
+       
         <form action="" method="post">
+         
+        <div class="form-group">
+            <label for="">Carteirinha</label>
+            <input type="text" class="form-control" id="">
+        </div>  
             <div class="form-group">
-            <label for="">Nome</labe>
+            <label for="">Nome</label>
             <input type="text" class="form-control" id="">
           </div>
 
