@@ -8,5 +8,5 @@ class Beneficiario extends Model
 {   
     protected $table = 'beneficiarios';
 
-    public $fillable = ['nome'];
+    public $fillable = ['id_beneficiario','nome_beneficiario'];
 }

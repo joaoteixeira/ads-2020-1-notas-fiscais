@@ -37,7 +37,14 @@ class BeneficiarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //$beneficiario = new Beneficiario();
+       //$beneficiario->id_beneficiario = $request->id_beneficiario;
+       //$beneficiario->nome_beneficiario = $request->nome_beneficiario;
+       //$beneficiario->save();
+
+       $beneficiario = Beneficiario::create($request->all());
+
+       return 'Cliente cadastrado com sucesso';
     }
 
     /**
