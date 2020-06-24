@@ -36,6 +36,13 @@
                     <td>{{ $beneficiario -> nome_beneficiario}}</td>
                     <td>{{ $beneficiario -> cart_beneficiario}}</td>
                     <td><a href="/beneficiario/{{ $beneficiario->id}}/edit">Editar</a></td>
+
+                    <form action="{{ route ('beneficiario.destroy', $beneficiario->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+
+                    <button class="btn btn-link btn-sm" type="submit">Excluir</button>
+                    </form>
                 </tr>
                 @endforeach
             </tbody>
