@@ -44,7 +44,7 @@ class BeneficiarioController extends Controller
 
        $beneficiario = Beneficiario::create($request->all());
 
-       return 'Cliente cadastrado com sucesso';
+       return redirect('beneficiario')->with('status', 'Novo beneficiario cadastrado com sucesso');
     }
 
     /**
@@ -66,7 +66,10 @@ class BeneficiarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $beneficiarios = Beneficiario::find($id);
+       return view('cliente.edit', array('beneficiarios'=> $beneficiarios));
+
+      // return view('cliente.edit');
     }
 
     /**
@@ -78,7 +81,10 @@ class BeneficiarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $beneficiarios = Beneficiario::find($id);
+        $beneficiarios->update($request->all());
+
+        return redirect('beneficiario')->with('statusUpdate', 'Beneficiário atualizado com sucesso!');
     }
 
     /**
