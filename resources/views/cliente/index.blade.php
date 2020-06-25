@@ -35,14 +35,11 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $beneficiario -> nome_beneficiario}}</td>
                     <td>{{ $beneficiario -> cart_beneficiario}}</td>
-                    <td><a href="/beneficiario/{{ $beneficiario->id}}/edit">Editar</a></td>
+                    <td>
+                        <a href="{{ route('beneficiario.edit', $beneficiario->id )}}">Editar</a>
 
-                    <form action="{{ route ('beneficiario.destroy', $beneficiario->id)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-
-                    <button class="btn btn-link btn-sm" type="submit">Excluir</button>
-                    </form>
+                        <a href="{{ route('beneficiario.destroy-confirm', $beneficiario->id)}}">Excluir</a>
+                    </td>        
                 </tr>
                 @endforeach
             </tbody>

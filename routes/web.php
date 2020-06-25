@@ -26,3 +26,4 @@ Route::get('/sobre', function () {
 
 
 Route::resource('/beneficiario', 'BeneficiarioController');
+Route::get('/beneficiario/destroy/{id}','BeneficiarioController@destroyConfirm')->name('beneficiario.destroy-confirm');

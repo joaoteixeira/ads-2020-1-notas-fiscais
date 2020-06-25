@@ -90,6 +90,17 @@ class BeneficiarioController extends Controller
      */
     public function destroy($id)
     {
-        return 'function destroy';
+        $beneficiarios = Beneficiario::find($id);
+        $beneficiarios->delete();
+
+        return redirect('beneficiario')->with('statusUpdate', 'Beneficiário deletado com sucesso!');
+    }
+
+    public function destroyConfirm($id)
+
+    {
+        $beneficiarios = Beneficiario::find($id);
+
+        return view('cliente.destroy', ['beneficiarios' => $beneficiarios]);
     }
 }

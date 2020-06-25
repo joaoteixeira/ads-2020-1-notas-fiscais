@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section ('content-title','Atualização de clientes')
+@section('content-title','Atualização de clientes')
 
 @section('content')
        
