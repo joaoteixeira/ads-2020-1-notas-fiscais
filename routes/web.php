@@ -31,3 +31,5 @@ Route::get('/beneficiario/destroy/{id}','BeneficiarioController@destroyConfirm')
 
 Route::resource('/fornecedor', 'FornecedorController');
 Route::get('/fornecedor/destroy/{id}','FornecedorController@destroyConfirm')->name('fornecedor.destroy-confirm');
+
+Route::resource('/lancamento', 'LancamentoNfController');
