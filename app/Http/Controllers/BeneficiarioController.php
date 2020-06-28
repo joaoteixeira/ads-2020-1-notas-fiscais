@@ -49,8 +49,12 @@ class BeneficiarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $beneficiario = Beneficiario::with('Lancamentos')->find($id);
+
+        //Beneficiario::find($id)->Lancamentos;
+
+        return $beneficiario;
     }
 
     /**

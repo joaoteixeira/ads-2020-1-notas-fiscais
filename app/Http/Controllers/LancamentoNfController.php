@@ -16,7 +16,9 @@ class LancamentoNfController extends Controller
      */
     public function index()
     {
-        return view('lancamento-nf.index');
+        $lancamentos = Lancamento::all();
+        return view('lancamento-nf.index', array('lancamentos'=> $lancamentos));
+        
     }
 
     /**
@@ -39,7 +41,22 @@ class LancamentoNfController extends Controller
      */
     public function store(Request $request)
     {
-        return 'okay';
+        $beneficiario = Beneficiario::find($request->beneficiario);
+
+        if(!$beneficiario)
+
+            return 'Erro ao selecionar um beneficiario';
+
+        $data = new \Datetime();    
+
+        $os = new Lancamento;
+        $os->beneficiario()->associate($beneficiario); 
+        $os->data = $data->format('Y-m-d');
+        $os->save();   
+
+        return $os;
+
+
     }
 
     /**
