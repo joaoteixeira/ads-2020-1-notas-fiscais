@@ -4,7 +4,7 @@
 
 @section('content')
        
-        <form action="{{ route('lancamento-nf.store') }}" method="post">
+        <form action="{{ route('lancamento.store') }}" method="post">
             @csrf
 
             <div class="form-group">

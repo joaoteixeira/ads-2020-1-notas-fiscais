@@ -8,7 +8,9 @@ class Lancamento extends Model
 {   
     protected $table = 'lancamentos';
 
-    public function beneficiario(){
+    public function beneficiario()
+    
+    {
 
         return $this->belongsTo('App\Beneficiario');
     }

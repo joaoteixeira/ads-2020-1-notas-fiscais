@@ -20,7 +20,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('lancamento-nf*') ? 'active' : '' }}" href="{{ route('lancamento-nf.index')}}">
+            <a class="nav-link {{ request()->is('lancamento-nf*') ? 'active' : '' }}" href="{{ route('lancamento.index')}}">
               <span data-feather="users"></span>
               Lançamentos
             </a>

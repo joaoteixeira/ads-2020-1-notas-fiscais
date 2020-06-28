@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Beneficiario;
 use App\Fornecedor;
-use App\LancamentoNf;
+use App\Lancamento;
 
 class LancamentoNfController extends Controller
 {
@@ -28,10 +28,7 @@ class LancamentoNfController extends Controller
     {   $beneficiarios = Beneficiario::all();
         return view('lancamento-nf.create', ['beneficiarios' => $beneficiarios]);
 
-        $fornecedores = Fornecedor::all();
-        return view('lancamento-nf.create', ['fornecedores' => $fornecedores]);
-
-       
+             
     }
 
     /**
