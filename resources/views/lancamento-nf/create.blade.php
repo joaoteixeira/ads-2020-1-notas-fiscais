@@ -23,16 +23,33 @@
                         <option value="{{ $beneficiario->id }}">{{ $beneficiario->nome_beneficiario}}</option>
                     @endforeach
                 </select>
+            </div>    
 
-                <div class="form-group">
+            <div class="form-group">
                 <label for="">Fornecedor</label>
                 <select name="fornecedor" class="form-control">
                     <option>Selecione o fornecedor</option>
 
-                
-                </select>    
+                </select>  
 
             </div>
+
+                    
+            <div class="form-group">
+                <label for="">Lote</label>
+                <input name="lote" class="form-control" placeholder="Digite o número do lote">
+                    
+
+            </div>
+
+            <div class="form-group">
+                <label for="">Número do chamado</label>
+                <input name="lote" class="form-control" placeholder="Digite o número do chamado">
+                    
+
+            </div>
+
+
 
              <button type="submit" class="btn btn-primary">Salvar</button>
          </form> 

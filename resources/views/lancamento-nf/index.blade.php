@@ -25,6 +25,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $lancamento -> id}}</td>
                     <td>{{ $lancamento -> lote_lancamento}}</td>
+                    <td>{{ $lancamento -> data}}</td>
                     <td>{{ $lancamento -> n_chamado}}</td>
                     <td>
                         

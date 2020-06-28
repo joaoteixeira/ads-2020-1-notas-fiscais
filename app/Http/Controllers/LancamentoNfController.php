@@ -30,8 +30,12 @@ class LancamentoNfController extends Controller
     {   $beneficiarios = Beneficiario::all();
         return view('lancamento-nf.create', ['beneficiarios' => $beneficiarios]);
 
-             
+        $fornecedores = Fornecedor::all();
+        return view('lancamento-nf.create', ['fornecedores' => $fornecedores]);
+
+              
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -40,7 +44,8 @@ class LancamentoNfController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+
+    {   $fornecedores = Fornecedor::find($request->fornecedor);
         $beneficiario = Beneficiario::find($request->beneficiario);
 
         if(!$beneficiario)
