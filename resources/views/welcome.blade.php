@@ -2,10 +2,10 @@
 
 @section('title', 'Principal')
 
-@section ('content-title','Dashboard')
+@section ('content-title','Controle de Notas Fiscais')
 
 @section('content')
-    <div class="title m-b-md">
-         Página inicial
+    <div class="alert alert-success" role="alert">
+        Sistema de controle de notas fiscais
     </div>
 @endsection 

@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $beneficiarios = \App\Beneficiario::all();
+   
 
-    return $beneficiarios;
-});
+    return view('welcome');
+})->middleware('auth');
 
 Route::get('/sobre', function () {
     return view('sobre');
@@ -33,3 +33,7 @@ Route::resource('/fornecedor', 'FornecedorController');
 Route::get('/fornecedor/destroy/{id}','FornecedorController@destroyConfirm')->name('fornecedor.destroy-confirm');
 
 Route::resource('/lancamento', 'LancamentoNfController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
